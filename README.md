@@ -11,7 +11,9 @@ conda create --name djangoenv python=3
 ``` 
  Now we need to install django on this virtual environment:
 ```
-activate djangoenv
+activate djangoenv //windows
+or 
+source activate djangoenv //linux
 pip install django
  ```
  Now clone the repository by running the following code:
