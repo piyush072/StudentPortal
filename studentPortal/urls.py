@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('reset/',include('password_reset.urls')),
+    path('',include('home.urls')),
 ]

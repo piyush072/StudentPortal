@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="{% static 'images/nit.png' %}">
+    <style media="screen">
+      #c1{
+        padding-top: 110px;
+      }
+      #c2{
+        margin-top: 20px;
+      }
+      img{
+        padding-bottom: 7px;
+      }
+      canvas{
+        display: block;
+        vertical-align: bottom;
+      }
+      #particles-js{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          position: fixed;
+          z-index: -1;
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="" id="particles-js"></div>
+    <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    <nav class="navbar navbar-light bg-transparent">
+	  <a class="navbar-brand text-light">
+	   	 <img src="{% static 'images/image.png' %}" width="30" height="40" class="d-inline-block align-top" alt="">
+	    	National Institute Of Technology, Jamshedpur
+	 	 </a>
+	  <form class="form-inline">
+	 <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
+  </form>
+  </div>
+  </body>
+</html>
+
+
+

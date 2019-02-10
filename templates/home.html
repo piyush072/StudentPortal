@@ -33,18 +33,26 @@
 </div>
 <div class="container" style="padding-top : 70px;">
   <div class="card-deck">
-    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
-      <h3 class="text-light">----</h3>
-    </div>
-    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
-      <h3 class="text-light">----</h3>
-    </div>
-    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
-      <h3 class="text-light">----</h3>
-    </div>
-    <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
-      <h3 class="text-light">----</h3>
-    </div>
+    <a href="{% url 'timetable' %}">
+      <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+        <h3 class="text-light">Time Table</h3>
+      </div>
+    </a>
+    <a href="{% url 'faculty' %}">
+      <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+        <h3 class="text-light">Faculty</h3>
+      </div>
+    </a>
+    <a href="{% url 'timetable' %}">
+      <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+        <h3 class="text-light">Notice</h3>
+      </div>
+    </a>
+    <a href="{% url 'developers' %}">
+      <div class="card bg-transparent border-light" style="width: 15rem; height: 20rem; text-align: center;">
+        <h3 class="text-light">Developers</h3>
+      </div>
+    </a>
   </div>
 </div>
 {% else %}
