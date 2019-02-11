@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="{% static 'images/nit.png' %}">
+    <style media="screen">
+    table#t01 tr:nth-child(even) {
+      border: 1px solid black;
+      background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+      border: 1px solid black;
+      background-color: #fff;
+    }
+    table#t01 th {
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+    }
+    table#t02 tr:nth-child(even) {
+      border: 1px solid black;
+      background-color: #eee;
+    }
+    table#t02 tr:nth-child(odd) {
+      border: 1px solid black;
+      background-color: #fff;
+    }
+    table#t02 th {
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+    }
+      #c1{
+        padding-top: 110px;
+      }
+      #c2{
+        margin-top: 20px;
+      }
+      img{
+        padding-bottom: 7px;
+      }
+      canvas{
+        display: block;
+        vertical-align: bottom;
+      }
+      #particles-js{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          position: fixed;
+          z-index: -1;
+      }
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="">
+            <div class="" id="particles-js"></div>
+            <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+            <nav class="navbar navbar-light bg-transparent">
+        	    <a class="navbar-brand text-light">
+      	   	    <img src="{% static 'images/image.png' %}" width="30" height="40" class="d-inline-block align-top" alt="">
+      	    	    National Institute Of Technology, Jamshedpur
+        	 	  </a>
+        	    <form class="form-inline">
+        	      <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
+              </form>
+          </nav>
+      </div>
+      <br>
+      <br>
+      <div class="container text-center" style="padding-right: 10px; padding-left: 10px;">
+        <h1 class="text-light text-center">TIME-TABLE(for Spring Semester,2018-19)</h1>
+        <div class="dropdown">
+          <button class="dropbtn">B.Tech, 4th Semester, Computer Science & Engineering</button>
+          <div class="dropdown-content">
+            <a href="{% url 'sem2' %}">I</a>
+            <a href="{% url 'sem4' %}">II</a>
+            <a href="{% url 'sem6' %}">III</a>
+            <a href="{% url 'sem8' %}">IV</a>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <pre>Room No.NA206</pre>
+        <div style="overflow-x:auto;">
+      <table id="t01" width="100%">
+        <tr align="center">
+          <th></th>
+          <th>08:00-08:55</th>
+          <th>09:00-09:55</th>
+          <th>10:00-10:55</th>
+          <th>11:00-11:55</th>
+          <th>01:00-01:55</th>
+          <th>02:00-02:55</th>
+          <th>03:00-03:55</th>
+          <th>04:00-04:55</th>
+        </tr>
+        <tr align="center">
+          <td>Monday</td>
+          <td colspan="2">CS408</td>
+          <td colspan="2">CS407</td>
+          <td>CS402</td>
+          <td>CS403</td>
+          <td>CS404</td>
+          <td>CS405</td>
+        </tr>
+        <tr align="center">
+          <td>Tuesday</td>
+          <td colspan="2">CS408</td>
+          <td colspan="2">CS406</td>
+          <td>CS402</td>
+          <td>CS403</td>
+          <td>CS404</td>
+          <td>CS401</td>
+        </tr>
+        <tr align="center">
+          <td>Wednesday</td>
+          <td></td>
+          <td></td>
+          <td colspan="2">CS406</td>
+          <td>CS402</td>
+          <td>CS403</td>
+          <td>CS405</td>
+          <td>CS401</td>
+        </tr>
+        <tr align="center">
+          <td>Thursday</td>
+          <td></td>
+          <td></td>
+          <td colspan="2">CS407</td>
+          <td>CS402</td>
+          <td>CS404</td>
+          <td>CS405</td>
+          <td>CS401</td>
+        </tr>
+        <tr align="center">
+          <td>Friday</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>CS404</td>
+          <td>CS403</td>
+          <td>CS405</td>
+          <td>CS401</td>
+        </tr>
+        <tr>
+      </table>
+
+      <table id="t02" width="100%">
+        <tr align="center">
+          <th>Sl#</th>
+          <th>Subject Code</th>
+          <th>Subject Name</th>
+          <th>Credit</th>
+          <th>Faculty Name</th>
+        </tr>
+        <tr align="center">
+          <td>1</td>
+          <td>CS401</td>
+          <td>Database Management Sytem</td>
+          <td>4</td>
+          <td>Dr. Koushlendra Kumar Singh(CSE)</td>
+        </tr>
+        <tr align="center">
+          <td>2</td>
+          <td>CS402</td>
+          <td>Theory of Computation</td>
+          <td>4</td>
+          <td>Dr. Vinay Kumar(CSE)</td>
+        </tr>
+        <tr align="center">
+          <td>3</td>
+          <td>CS403</td>
+          <td>Microprocessor and Interfacing</td>
+          <td>4</td>
+          <td>Dr. Ajay Kumar(ECE)</td>
+        </tr>
+        <tr align="center">
+          <td>4</td>
+          <td>CS404</td>
+          <td>Data Communication</td>
+          <td>4</td>
+          <td>Dr. Swagatateb Sahoo(ECE)</td>
+        </tr>
+        <tr align="center">
+          <td>5</td>
+          <td>CS405</td>
+          <td>Software Engineering</td>
+          <td>4</td>
+          <td>Temp Faculty</td>
+        </tr>
+        <tr align="center">
+          <td>6</td>
+          <td>CS406</td>
+          <td>Database Management Sytem Lab</td>
+          <td>2</td>
+          <td>Dr. Koushlendra Kumar Singh(CSE)</td>
+        </tr>
+        <tr align="center">
+          <td>7</td>
+          <td>CS407</td>
+          <td>Microprocessor and Interfacing Lab</td>
+          <td>2</td>
+          <td>Dr. Ajay Kumar(ECE)</td>
+        </tr>
+        <tr align="center">
+          <td>8</td>
+          <td>CS408</td>
+          <td>Software Engineering Lab</td>
+          <td>2</td>
+          <td>Temp Faculty</td>
+        </tr>
+      </table>
+      </div>
+  </body>
+</html>

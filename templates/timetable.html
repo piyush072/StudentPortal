@@ -27,24 +27,77 @@
           position: fixed;
           z-index: -1;
       }
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body>
-    <div class="" id="particles-js"></div>
-    <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
-    <nav class="navbar navbar-light bg-transparent">
-	  <a class="navbar-brand text-light">
-	   	 <img src="{% static 'images/image.png' %}" width="30" height="40" class="d-inline-block align-top" alt="">
-	    	National Institute Of Technology, Jamshedpur
-	 	 </a>
-	  <form class="form-inline">
-	 <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
-  </form>
-  </div>
+        <div class="">
+            <div class="" id="particles-js"></div>
+            <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+            <nav class="navbar navbar-light bg-transparent">
+        	    <a class="navbar-brand text-light">
+      	   	    <img src="{% static 'images/image.png' %}" width="30" height="40" class="d-inline-block align-top" alt="">
+      	    	    National Institute Of Technology, Jamshedpur
+        	 	  </a>
+        	    <form class="form-inline">
+        	      <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
+              </form>
+          </nav>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+        <h1 class="text-light text-center">Time Table</h1>
+        <div class="dropdown">
+          <button class="dropbtn">Select Year</button>
+          <div class="dropdown-content">
+            <a href="{% url 'sem2' %}">I</a>
+            <a href="{% url 'sem4' %}">II</a>
+            <a href="{% url 'sem6' %}">III</a>
+            <a href="{% url 'sem8' %}">IV</a>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
-
-
-
