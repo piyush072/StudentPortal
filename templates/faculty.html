@@ -62,8 +62,8 @@
         .tab {
           float: left;
           border: 1px solid #ccc;
-          background-color: #f1f1f1;
-          width: 15%;
+          background-color: transparent;
+          width: 20%;
           height: 100%;
         }
 
@@ -74,6 +74,7 @@
           color: black;
           padding: 22px 16px;
           width: 100%;
+          height: 85px;
           border: none;
           outline: none;
           text-align: left;
@@ -84,20 +85,21 @@
 
         /* Change background color of buttons on hover */
         .tab button:hover {
-          background-color: #ddd;
+          background-color: #5bc0de;
         }
 
         /* Create an active/current "tab button" class */
         .tab button.active {
-          background-color: #ccc;
+          background-color: #5cb85c;
         }
 
         /* Style the tab content */
         .tabcontent {
           float: left;
           padding: 0px 12px;
+          padding-top: 10px;
           border: 1px solid #ccc;
-          width: 85%;
+          width: 80%;
           border-left: none;
           height: 100%;
         }
@@ -118,33 +120,170 @@
 	     <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
   </form>
   </nav>
+  <br>
+  <h1 class="text-center text-info">Faculty</h1>
+  <br>
 <div class="container text-center">
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'id1')" id="defaultOpen">1st Year</button>
-    <button class="tablinks" onclick="openTab(event, 'id2')">Paris</button>
-    <button class="tablinks" onclick="openTab(event, 'id3')">Tokyo</button>
-    <button class="tablinks" onclick="openTab(event, 'id4')">Faculty</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id1')" id="defaultOpen">Dr. Binod Kumar</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id2')">Mr. Rajiv Ranjan Suman</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id3')">Mr. Sanjay Kumar</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id4')">Dr. Koushlendra Kumar Singh</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id5')">Dr. Dilip Kumar</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id6')">Dr. Subratta Dutta</button>
+    <button class="tablinks text-light" onclick="openTab(event, 'id7')">Dr. Vinay Kumar</button>
   </div>
 
-  <div id="id1" class="tabcontent">
-    <h1>placehold</h1>
+  <div id="id1" class="tabcontent text-light">
+    <img src="{% static 'images/faculty/binod.jpg' %}" alt="">
+    <h5>Associate Professor & Head</h5>
+    <h6>Interests: Software Engineering</h6>
+    <h6>B.E. (CSE), BIT SINDRI,</h6>
+    <h6>M.Tech. (CSE), IIT Roorkee,</h6>
+    <h6>Ph.D. - IIT Roorkee.</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : Dept. of CSE, NIT Jamshedpur</li>
+      <li>Phone Number : 0657-237-4097/99</li>
+      <li>E-mail : bksingh.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Software Engineering</li>
+      <li>Operating System</li>
+      <li>DBMS</li>
+      <li>Computer Architecture</li>
+      <li>Image Processing</li>
+    </ul>
   </div>
 
   <div id="id2" class="tabcontent text-light">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p>
+    <img src="{% static 'images/faculty/rrsuman_cse.jpg' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Associate Professor</h5>
+    <h6>Interests: Software Engineering</h6>
+    <h6>B.Tech,</h6>
+    <h6>M.Tech.,</h6>
+    <h6>Ph.D.(pursuing)</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : Dept. of CSE, NIT Jamshedpur</li>
+      <li>Phone Number : 0657-237-4101</li>
+      <li>Mobile Number : 8434765977</li>
+      <li>E-mail : rrsuman.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Software Engineering</li>
+    </ul>
   </div>
 
   <div id="id3" class="tabcontent text-light">
-    <h3>Tokyo</h3>
-    <p>Tokyo is the capital of Japan.</p>
+    <img src="{% static 'images/faculty/Sanjay.jpg' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Associate Professor</h5>
+    <h6>Interests: Network Security</h6>
+    <h6>Ph.D.(pursuing), NIT Jamshedpur</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : QR. No. C-5, NIT Campus,Adityapur, P.O./ P.S. - RIT, District - Saraikella Kharsawn, Jharkhand - 831014</li>
+      <li>Phone Number : 0657-237-4102</li>
+      <li>Mobile Number : 9431348965</li>
+      <li>E-mail : sanjay.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Network Security</li>
+      <li>Mobile Computing, Parallel & Distributed Systems, Artificial Intelligence</li>
+    </ul>
   </div>
 
   <div id="id4" class="tabcontent text-light">
-    <h3>Ting Tong</h3>
-    <p>Ting ting tong</p>
+    <img src="{% static 'images/faculty/CS24.jpg' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Assistant Professor</h5>
+    <h6>Interests: Image Processing</h6>
+    <h6>B.Tech, BCE BHAGALPUR </h6>
+    <h6>M.Tech, IIITDM JABALPUR </h6>
+    <h6>Ph.D., IIITDM JABALPUR</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : Q.N.- 57,NIT Campus, Adityapur-2, Jamshedpur, Jharkhand, PIN: 831014</li>
+      <li>Mobile Number : 9479845831</li>
+      <li>E-mail : koushlendra.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Image Processing</li>
+      <li>Image Reconstruction</li>
+      <li>Remote Sensing</li>
+      <li>Fractional Calculus</li>
+      <li>Integral Transform</li>
+      <li>Pattern Classification</li>
+    </ul>
   </div>
 
+  <div class="tabcontent text-light" id="id5">
+    <img src="{% static 'images/faculty/dilip.jpg' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Assistant Professor</h5>
+    <h6>Interests: Cloud Computing</h6>
+    <h6>B.E.(CSE)</h6>
+    <h6>M.Tech (CSE) </h6>
+    <h6>Ph.D.</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Phone Number: 0657 2374103</li>
+      <li>Mobile Number : 9431184850</li>
+      <li>E-mail : dilip.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Cloud Computing</li>
+      <li>Optimization</li>
+      <li>Heuristic Techniques</li>
+      <li>Network Simulation</li>
+    </ul>
+  </div>
+
+  <div class="tabcontent text-light" id="id6">
+    <img src="{% static 'images/faculty/CS34.JPG' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Assistant Professor</h5>
+    <h6>Interests: Wireless Sensor Network</h6>
+    <h6>M.Tech (Jadavpur) </h6>
+    <h6>Ph.D.(Jadavpur)</h6>
+    <h6>Post Doc (United Kingdom)</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : Department of CSE</li>
+      <li>Mobile Number : 9477501086</li>
+      <li>E-mail : sdutta.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Wireless Sensor Network</li>
+      <li>Adhoc Network</li>
+      <li>Mobile Computing</li>
+    </ul>
+  </div>
+
+  <div class="tabcontent text-light" id="id7">
+    <img src="{% static 'images/faculty/CS33.png' %}" alt="" style="width: 15%; height: 15%;">
+    <h5>Assistant Professor</h5>
+    <h6>Interests: Software Engineering</h6>
+    <h6>M.Tech (NIT Durgapur) </h6>
+    <h6>Ph.D.(IIT BHU)</h6>
+    <h3 class="text-left">Address</h3>
+    <ul class="text-left">
+      <li>Residential Address : Department of CSE</li>
+      <li>Mobile Number : 9454690527</li>
+      <li>E-mail : vkumar.cse@nitjsr.ac.in</li>
+    </ul>
+    <h3 class="text-left">Areas of Interests</h3>
+    <ul class="text-left">
+      <li>Software Engineering</li>
+      <li>Mathematical Modeling</li>
+      <li>Dependability analysis of Computer Based Systems</li>
+      <li>Internet of Things (IoT)</li>
+      <li>Distributed Computing</li>
+    </ul>
+  </div>
 </div>
 
 
