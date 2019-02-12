@@ -27,6 +27,13 @@
           position: fixed;
           z-index: -1;
       }
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
@@ -42,9 +49,36 @@
 	  <form class="form-inline">
 	 <a class="nav-item nav-link mr-sm-0" href="{% url 'home' %}"> <button type="button" class="btn btn-success bg-transparent text-success" name="button">Back</button> </a>
   </form>
+</nav>
+<h1 class="text-info text-center">Developers</h1>
+<div class="container" style="padding-top : 70px;">
+  <div class="card-deck">
+      <div class="card bg-transparent border-light" style="width: 20rem; height: 100%; text-align: center;">
+        <img src="{% static 'images/dev/piyush.jpg' %}" class="card-img-top center" style="width: 100%; height: 100%;" alt="">
+        <div class="card-body">
+          <h3 class="card-title text-light">Piyush Ranjan</h3>
+          <h4 class="text-light">2017UGCS007</h4>
+          <a class="github-button" href="https://github.com/piyush072" data-size="large" aria-label="Follow @piyush072 on GitHub">Follow @piyush072</a>
+        </div>
+      </div>
+      <div class="card bg-transparent border-light" style="width: 20rem; height: 100%; text-align: center;">
+        <img src="{% static 'images/dev/sushil.jpg' %}" class="card-img-top center" style="width: 100%; height: 100%;" alt="">
+        <div class="card-body">
+          <h3 class="card-title text-light">Sushil Kisku</h3>
+          <h4 class="text-light">2017UGCS033</h4>
+          <a class="github-button" href="https://github.com/sushil24sk" data-size="large" aria-label="Follow @sushil24sk on GitHub">Follow @sushil24sk</a>
+        </div>
+      </div>
+      <div class="card bg-transparent border-light" style="width: 20rem; height: 100%; text-align: center;">
+        <img src="{% static 'images/dev/satyam.jpg' %}" class="card-img-top center" style="width: 100%; height: 100%;" alt="">
+        <div class="card-body">
+          <h3 class="card-title text-light">Satyam Raj</h3>
+          <h4 class="text-light">2017UGCS031</h4>
+        </div>
+      </div>
   </div>
+</div>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
-</html>
-
-
-
+  </html>
