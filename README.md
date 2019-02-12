@@ -57,8 +57,7 @@ pip install django
  After signing in your page will look something like this:
  <br/>
  <br/>
- ![home page](screenshots/Screenshot2.png)
+ ![home page](screenshots/Screenshot5.png)
  <br/>
  <br/>
- I will be completing this web application soon!
  
