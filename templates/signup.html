@@ -8,21 +8,16 @@
       <a href="{% url 'home' %}">
         <img src="{% static 'images/image.png' %}" alt="">
       </a>
-      <form method="post">
+      {% if registered %}
+        <h1>Thank you for registering</h1>
+      {% else %}
+      <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
-        {% for field in form %}
-        <div class="form-group">
-          {% if field.html_name == "password1" %}
-            <input class="form-control" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}" placeholder="{{ field.label }}" type="password" />
-          {% elif field.html_name == "password2" %}
-            <input class="form-control" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}" placeholder="{{ field.label }}" type="password" />
-          {% else %}
-            <input class="form-control" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}" placeholder="{{ field.label }}" type="{{ field.html_name }}" />
-          {% endif %}
-        </div>
-        {% endfor %}
+        {{ profile_form.as_p }}
+        {{ user_form.as_p }}
         <button class="btn btn-success bg-transparent text-success" type="submit" style="margin-bottom: 7px;">Sign up</button>
       </form>
+      {% endif %}
     </div>
 
     <div class="card-footer bg-transparent border-light"> <p class="text-light">Already a user?</p> <a href="{% url 'login' %}"> <button type="button" class="btn btn-primary bg-transparent text-primary" name="button">Login</button> </a>  </div>

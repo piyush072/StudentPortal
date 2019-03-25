@@ -12,11 +12,11 @@
       <a class="github-button" href="https://github.com/piyush072/studentPortal/fork" data-size="large" aria-label="Fork piyush072/studentPortal on GitHub">Fork</a>
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <a class="nav-item nav-link mr-sm-2" href="#">
-        {% if user.first_name != "" %}
-        {{ user.first_name }} {{ user.last_name }}
-        {% else %}
+
+        {{ UserForm.first_name }} {{ UserProfileInfo.last_name }}
+
         {{ user.username }}
-        {% endif %}
+
       </a>
       <a class="nav-item nav-link mr-sm-2" href="{% url 'logout' %}"> <button type="button" class="btn btn-danger bg-transparent text-danger" name="button">Logout</button> </a>
     </form>
