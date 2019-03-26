@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 <div class="container text-light" align="center" style="padding-top: 20px;">
-  <div class="card border-light bg-transparent" style="width: 20rem;">
+  <div class="card border-light bg-transparent" style="width: 25rem;">
     <div class="container" id='c2'>
       <h2>Sign Up</h2>
       <a href="{% url 'home' %}">
@@ -13,8 +13,53 @@
       {% else %}
       <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
-        {{ profile_form.as_p }}
-        {{ user_form.as_p }}
+
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">@</span>
+          </div>
+          <input class="form-control" type="text" name="username" maxlength="150" required id="id_username" placeholder="Username" aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">First Name</span>
+          </div>
+          <input class="form-group form-control" type="text" name="first_name" maxlength="30" required id="id_first_name">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Last Name</span>
+          </div>
+          <input class="form-group form-control" type="text" name="last_name" maxlength="30" required id="id_last_name">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Email</span>
+          </div>
+            <input class="form-group form-control" type="email" name="email" maxlength="254" id="id_email">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Password</span>
+          </div>
+          <input class="form-group form-control" type="password" name="password" required id="id_password">
+        </div>
+        <br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+          <input class="custom-file-input" type="file" name="profile_pic" accept="image/*" id="id_profile_pic">
+          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+      </div>
+
+      <br>
         <button class="btn btn-success bg-transparent text-success" type="submit" style="margin-bottom: 7px;">Sign up</button>
       </form>
       {% endif %}
